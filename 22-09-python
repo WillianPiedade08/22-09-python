@@ -1,0 +1,117 @@
+1 - Somatório de Números: Escreva um programa que peça ao usuário 5 números e calcule a soma deles.
+#include <stdio.h>
+
+int main()
+{
+    int n1, n2, n3, n4, n5, soma;
+    printf("Digite o primeiro número:");
+    scanf("%d", &n1);
+    
+    printf("Digite o segundo número:");
+    scanf("%d", &n2);
+    
+    printf("Digite o terceiro número:");
+    scanf("%d", &n3);
+    
+    printf("Digite o quarto número:");
+    scanf("%d", &n4);
+
+    printf("Digite o quinto número:");
+    scanf("%d", &n5);
+    
+    soma = n1 + n2 + n3 + n4 + n5;
+    printf("A soma de número é:");
+    printf("%d", soma);
+    return 0;
+}
+
+2 -  Tabuada: Escreva um programa que pede um número e imprime a tabuada desse número de 1 a 10.
+#include <stdio.h>
+
+int main() {
+    int numero, contador;
+
+
+    printf("Digite um numero para ver a tabuada: ");
+    scanf("%d", &numero);
+
+ 
+    printf("Tabuada do %d:\n", numero);
+    contador = 1;
+    while (contador <= 10) {
+        printf("%d x %d = %d\n", numero, contador, numero * contador);
+        contador++;
+    }
+
+    return 0;
+}
+
+3 - Validação de Entrada: Crie um programa que continue pedindo um número positivo ao usuário até que ele insira um número negativo.
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    do {
+        printf("Digite um número positivo ou negativo para sair: ");
+        scanf("%d", &numero);
+
+        if (numero >= 0) {
+            printf("Você digitou: %d\n", numero);
+        }
+
+    } while (numero >= 0);
+
+    printf("Programa encerrado. Você digitou um número negativo.\n");
+
+    return 0;
+}
+
+4 - Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+#include <stdio.h>
+
+int main() 
+{
+    int nota;
+
+    do {
+        printf("Digite uma nota entre 0 e 10: ");
+        scanf("%d", &nota);
+
+        if (nota < 0 || nota > 10) {
+            printf("Nota inválida! Tente novamente.\n");
+        }
+    } while (nota < 0 || nota > 10);
+
+    printf("Nota válida: %d\n", nota);
+
+    return 0;
+}
+
+5 - Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os números um ao lado do outro.
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 1; i <= 20; i++) {
+        printf("%d\n", i);  
+    }
+
+    return 0;
+}
+
+6 - Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 1; i <= 50; i++) {
+        if (i % 2 != 0) {  
+            printf("%d\n", i);
+        }
+    }
+
+    return 0;
+}
